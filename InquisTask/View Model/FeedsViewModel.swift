@@ -17,16 +17,17 @@ protocol FeedsViewModelProtocol: BaseViewModelProtocol {
     var showInfoMessageClosure: (()->())? { get set }
     
     func getFeeds()
-    func getFeedImageURL(at indexPath: IndexPath) -> String
-    func getFeedTitle(at indexPath: IndexPath) -> String
-    func deleteFeed(at indexPath: IndexPath)
+    func getFeedImageURL(at index: Int) -> String
+    func getFeedTitle(at index: Int) -> String
+    func deleteFeed(at index: Int)
     func processRssUrl(_ textField: UITextField)
     func creteStoriesViewModel(forFeedAt indexPath: IndexPath) -> StoriesViewModel
 }
 
 final class FeedsViewModel: BaseViewModel, FeedsViewModelProtocol {
     
-    // MARK: - PRIVATE PROPERTIES
+    // MARK: - PROPERTIES
+    
     
     private var feeds = [Feeds]() {
         didSet {
@@ -66,18 +67,18 @@ final class FeedsViewModel: BaseViewModel, FeedsViewModelProtocol {
         }
     }
     
-    func getFeedImageURL(at indexPath: IndexPath) -> String {
-        return feeds[indexPath.row].image ?? ""
+    func getFeedImageURL(at index: Int) -> String {
+        return feeds[index].image ?? ""
     }
     
-    func getFeedTitle(at indexPath: IndexPath) -> String {
-        return feeds[indexPath.row].title
+    func getFeedTitle(at index: Int) -> String {
+        return feeds[index].title
     }
     
-    func deleteFeed(at indexPath: IndexPath) {
+    func deleteFeed(at index: Int) {
         self.isLoading = true
         
-        let feedToDelete = self.feeds[indexPath.row]
+        let feedToDelete = self.feeds[index]
         repository.deleteFeed(feed: feedToDelete) { [weak self] result in
             guard let self = self else { return }
             self.isLoading = false

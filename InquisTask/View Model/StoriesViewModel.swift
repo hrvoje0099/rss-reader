@@ -12,9 +12,9 @@ protocol StroriesViewModelProtocol {
     var feedStoriesCount: Int { get }
     
     func getStories()
-    func getStoryCreatedDate(at indexPath: IndexPath) -> String
-    func getStoryTitle(at indexPath: IndexPath) -> String
-    func getStoryLink(at indexPath: IndexPath) -> URL?
+    func getStoryCreatedDate(at index: Int) -> String
+    func getStoryTitle(at index: Int) -> String
+    func getStoryLink(at index: Int) -> URL?
     func getTitle() -> String
 }
 
@@ -62,18 +62,18 @@ final class StoriesViewModel: BaseViewModel, StroriesViewModelProtocol {
         }
     }
     
-    func getStoryCreatedDate(at indexPath: IndexPath) -> String {
-        let createdDate = feed.stories?[indexPath.row].pubDate?.ISO8601Format() ?? ""
+    func getStoryCreatedDate(at index: Int) -> String {
+        let createdDate = feed.stories?[index].pubDate?.ISO8601Format() ?? ""
         let createdDateFormatted = DateFormatter.formatter.convertDateFormat(inputDate: createdDate)
         return createdDateFormatted
     }
     
-    func getStoryTitle(at indexPath: IndexPath) -> String {
-        return feed.stories?[indexPath.row].title ?? ""
+    func getStoryTitle(at index: Int) -> String {
+        return feed.stories?[index].title ?? ""
     }
     
-    func getStoryLink(at indexPath: IndexPath) -> URL? {
-        return URL(string: feed.stories?[indexPath.row].link ?? "")
+    func getStoryLink(at index: Int) -> URL? {
+        return URL(string: feed.stories?[index].link ?? "")
     }
     
     func getTitle() -> String {

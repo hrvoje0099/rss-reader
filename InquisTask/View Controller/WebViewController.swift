@@ -18,12 +18,12 @@ final class WebViewController: UIViewController {
         return webView
     }()
     
-    private var pageURL: URL
+    private var storyURL: URL
     
     // MARK: - INIT
     
     init(pageURL: URL) {
-        self.pageURL = pageURL
+        self.storyURL = pageURL
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -44,7 +44,7 @@ final class WebViewController: UIViewController {
     // MARK: - PRIVATE METHODS
     
     private func setupWKWebView() {
-        webView.wkWebView.load(URLRequest(url: pageURL))
+        webView.wkWebView.load(URLRequest(url: storyURL))
         webView.wkWebView.allowsBackForwardNavigationGestures = true
     }
 }

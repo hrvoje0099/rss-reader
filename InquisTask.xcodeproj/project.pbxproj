@@ -15,7 +15,7 @@
 		B00260A7276BB8D100513354 /* StoriesViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00260A6276BB8D100513354 /* StoriesViewModelTest.swift */; };
 		B00260C5276BBB3600513354 /* FeedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00260C4276BBB3600513354 /* FeedsView.swift */; };
 		B00260C9276BBF1600513354 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00260C8276BBF1600513354 /* FeedCell.swift */; };
-		B00260CE276BF7ED00513354 /* AddRSSSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00260CD276BF7ED00513354 /* AddRSSSheetViewController.swift */; };
+		B00260CE276BF7ED00513354 /* AddFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00260CD276BF7ED00513354 /* AddFeedViewController.swift */; };
 		B00C909F276E440500DE99B5 /* FeedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00C909E276E440500DE99B5 /* FeedsViewModel.swift */; };
 		B0160887276F4475009C59ED /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0160886276F4475009C59ED /* ImageLoader.swift */; };
 		B0160889276F4494009C59ED /* UIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0160888276F4494009C59ED /* UIImageLoader.swift */; };
@@ -71,7 +71,7 @@
 		B00260AC276BB8D100513354 /* InquisTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InquisTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00260C4276BBB3600513354 /* FeedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsView.swift; sourceTree = "<group>"; };
 		B00260C8276BBF1600513354 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
-		B00260CD276BF7ED00513354 /* AddRSSSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRSSSheetViewController.swift; sourceTree = "<group>"; };
+		B00260CD276BF7ED00513354 /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
 		B00C909E276E440500DE99B5 /* FeedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewModel.swift; sourceTree = "<group>"; };
 		B0160886276F4475009C59ED /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		B0160888276F4494009C59ED /* UIImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageLoader.swift; sourceTree = "<group>"; };
@@ -144,8 +144,7 @@
 		B002608B276BB8CC00513354 /* InquisTask */ = {
 			isa = PBXGroup;
 			children = (
-				B002608C276BB8CC00513354 /* AppDelegate.swift */,
-				B002608E276BB8CC00513354 /* SceneDelegate.swift */,
+				EEA88C1E2799783B00812F65 /* Application Delegate */,
 				B0FCCFBC276CEC8E00C96A33 /* Extensions */,
 				B0160884276F4456009C59ED /* Service */,
 				B00AD02B2770BF7B00B386AC /* Model */,
@@ -181,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				B0026090276BB8CC00513354 /* FeedsViewController.swift */,
-				B00260CD276BF7ED00513354 /* AddRSSSheetViewController.swift */,
+				B00260CD276BF7ED00513354 /* AddFeedViewController.swift */,
 				B055135E276F962000963EE7 /* StoriesViewController.swift */,
 				B0551367276FB57B00963EE7 /* WebViewController.swift */,
 			);
@@ -241,6 +240,15 @@
 				B079C8A62773B59100C6C9DF /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EEA88C1E2799783B00812F65 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				B002608C276BB8CC00513354 /* AppDelegate.swift */,
+				B002608E276BB8CC00513354 /* SceneDelegate.swift */,
+			);
+			path = "Application Delegate";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,7 +422,7 @@
 				B0160889276F4494009C59ED /* UIImageLoader.swift in Sources */,
 				B055136A276FBA2000963EE7 /* WebView.swift in Sources */,
 				B0551364276FA47400963EE7 /* StoryCell.swift in Sources */,
-				B00260CE276BF7ED00513354 /* AddRSSSheetViewController.swift in Sources */,
+				B00260CE276BF7ED00513354 /* AddFeedViewController.swift in Sources */,
 				B00C909F276E440500DE99B5 /* FeedsViewModel.swift in Sources */,
 				B055135F276F962000963EE7 /* StoriesViewController.swift in Sources */,
 				B0666807277279A4008D57D9 /* RssReaderModel.xcdatamodeld in Sources */,

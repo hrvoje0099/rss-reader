@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FeedKit
 
 final class StoriesViewController: UIViewController {
 
@@ -93,8 +92,8 @@ extension StoriesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: StoryCell.StoryCellReuseIdentifier, for: indexPath) as? StoryCell else { return UITableViewCell() }
 
-        cell.storyCreatedDateLabel.text = storiesViewModel.getStoryCreatedDate(at: indexPath)
-        cell.storyNameLabel.text = storiesViewModel.getStoryTitle(at: indexPath)
+        cell.storyCreatedDateLabel.text = storiesViewModel.getStoryCreatedDate(at: indexPath.row)
+        cell.storyNameLabel.text = storiesViewModel.getStoryTitle(at: indexPath.row)
 
         return cell
     }

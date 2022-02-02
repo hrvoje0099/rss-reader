@@ -1,5 +1,5 @@
 //
-//  AddRSSSheetViewController.swift
+//  AddFeedViewController.swift
 //  InquisTask
 //
 //  Created by Hrvoje Vuković on 16.12.2021..
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AddRSSSheetViewController: UIViewController {
+final class AddFeedViewController: UIViewController {
 
     // MARK: - PRIVATE PROPERTIES
     
@@ -64,7 +64,7 @@ final class AddRSSSheetViewController: UIViewController {
             guard let self = self else { return }
             
             DispatchQueue.main.async {
-                let isLoading = self.feedsViewModel.isLoading 
+                let isLoading = self.feedsViewModel.isLoading
                 if isLoading {
                     self.addRSSView.activityIndicator.startAnimating()
                 } else {

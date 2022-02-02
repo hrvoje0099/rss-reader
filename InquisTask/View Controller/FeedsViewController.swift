@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FeedKit
 
 final class FeedsViewController: UIViewController {
 
@@ -58,6 +57,8 @@ final class FeedsViewController: UIViewController {
     }
     
     private func initViewModelBinding() {
+        
+        // Need to reload table when delete feed
         feedsViewModel.reloadTableView = { [weak self] in
             guard let self = self else { return }
             
@@ -122,8 +123,8 @@ extension FeedsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedCell.FeedCellReuseIdentifier, for: indexPath) as? FeedCell else { return UITableViewCell() }
 
-        cell.feedImageView.loadImage(at: feedsViewModel.getFeedImageURL(at: indexPath))
-        cell.feedNameLabel.text = feedsViewModel.getFeedTitle(at: indexPath)
+        cell.feedImageView.loadImage(at: feedsViewModel.getFeedImageURL(at: indexPath.row))
+        cell.feedNameLabel.text = feedsViewModel.getFeedTitle(at: indexPath.row)
 
         return cell
     }
@@ -143,7 +144,7 @@ extension FeedsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] action, view, completionHandler in
-            self?.feedsViewModel.deleteFeed(at: indexPath)
+            self?.feedsViewModel.deleteFeed(at: indexPath.row)
         }
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
