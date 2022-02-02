@@ -21,13 +21,16 @@ protocol FeedsViewModelProtocol: BaseViewModelProtocol {
     func getFeedTitle(at index: Int) -> String
     func deleteFeed(at index: Int)
     func processRssUrl(_ textField: UITextField)
-    func creteStoriesViewModel(forFeedAt indexPath: IndexPath) -> StoriesViewModel
+    func showStories(at index: Int)
+    func addNewFeed()
 }
 
 final class FeedsViewModel: BaseViewModel, FeedsViewModelProtocol {
     
     // MARK: - PROPERTIES
     
+    var didShowStories: ((String) -> ())?
+    var didAddNewFeed: (() -> ())?
     
     private var feeds = [Feeds]() {
         didSet {
@@ -45,7 +48,7 @@ final class FeedsViewModel: BaseViewModel, FeedsViewModelProtocol {
     
     // MARK: - INIT
     
-    init(repository: Repository = Repository()) {
+    init(repository: Repository) {
         self.repository = repository
     }
     
@@ -121,9 +124,13 @@ final class FeedsViewModel: BaseViewModel, FeedsViewModelProtocol {
         }
     }
     
-    func creteStoriesViewModel(forFeedAt indexPath: IndexPath) -> StoriesViewModel {
-        let feedURL = self.feeds[indexPath.row].link
-        return StoriesViewModel(repository, feedURL)
+    func showStories(at index: Int) {
+        let feedURL = self.feeds[index].link
+        didShowStories?(feedURL)
+    }
+    
+    func addNewFeed() {
+        didAddNewFeed?()
     }
     
     // MARK: - PRIVATE METHODS

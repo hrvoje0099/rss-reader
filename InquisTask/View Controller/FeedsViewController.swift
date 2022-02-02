@@ -96,14 +96,7 @@ final class FeedsViewController: UIViewController {
     // MARK: - SELECTORS METHODS
 
     @objc private func addFeedPresed() {
-        let addRSSSheetVC = AddRSSSheetViewController(viewModel: feedsViewModel)
-        let navigationController = UINavigationController(rootViewController: addRSSSheetVC)
-        
-        if let sheet = navigationController.sheetPresentationController {
-            sheet.detents = [.medium()]
-        }
-        
-        present(navigationController, animated: true)
+        feedsViewModel.addNewFeed()
     }
     
     @objc private func reloadTableView() {
@@ -136,9 +129,7 @@ extension FeedsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let storiesViewModel = feedsViewModel.creteStoriesViewModel(forFeedAt: indexPath)
-        let storiesViewController = StoriesViewController(viewModel: storiesViewModel)
-        self.navigationController?.pushViewController(storiesViewController, animated: true)
+        feedsViewModel.showStories(at: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

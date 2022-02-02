@@ -39,6 +39,7 @@
 		B079C8A72773B59100C6C9DF /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B079C8A62773B59100C6C9DF /* UIViewController+Alert.swift */; };
 		B0D3B33A276CD44800906AFB /* AddRSSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3B339276CD44800906AFB /* AddRSSView.swift */; };
 		B0FCCFBE276CECA700C96A33 /* UITextField+BottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCFBD276CECA700C96A33 /* UITextField+BottomBorder.swift */; };
+		EEA88C212799786D00812F65 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA88C202799786D00812F65 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		B079C8A62773B59100C6C9DF /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		B0D3B339276CD44800906AFB /* AddRSSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRSSView.swift; sourceTree = "<group>"; };
 		B0FCCFBD276CECA700C96A33 /* UITextField+BottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+BottomBorder.swift"; sourceTree = "<group>"; };
+		EEA88C202799786D00812F65 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				EEA88C1E2799783B00812F65 /* Application Delegate */,
+				EEA88C1F2799785800812F65 /* Coordinators */,
 				B0FCCFBC276CEC8E00C96A33 /* Extensions */,
 				B0160884276F4456009C59ED /* Service */,
 				B00AD02B2770BF7B00B386AC /* Model */,
@@ -249,6 +252,14 @@
 				B002608E276BB8CC00513354 /* SceneDelegate.swift */,
 			);
 			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		EEA88C1F2799785800812F65 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				EEA88C202799786D00812F65 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +427,7 @@
 				B079C8A3277367DD00C6C9DF /* BaseViewModel.swift in Sources */,
 				B0160887276F4475009C59ED /* ImageLoader.swift in Sources */,
 				B079C8A52773937600C6C9DF /* Repository.swift in Sources */,
+				EEA88C212799786D00812F65 /* AppCoordinator.swift in Sources */,
 				B0551368276FB57B00963EE7 /* WebViewController.swift in Sources */,
 				B0026091276BB8CC00513354 /* FeedsViewController.swift in Sources */,
 				B024405527728D320042643B /* FeedClient.swift in Sources */,

@@ -9,21 +9,23 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    // MARK: - PROPERTIES
+    
     var window: UIWindow?
-
+    
+    private let appCoordinator = AppCoordinator()
+    
+    // MARK: - APP LIFE CYCLE
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        
-        let feedsViewModel = FeedsViewModel()
-        let feedsViewController = FeedsViewController(viewModel: feedsViewModel)
-        let navigationController = UINavigationController(rootViewController: feedsViewController)
-        navigationController.navigationBar.scrollEdgeAppearance = navigationController.navigationBar.standardAppearance
-        
-        window?.rootViewController = navigationController
+        window?.rootViewController = appCoordinator.rootViewController
         window?.makeKeyAndVisible()
+        
+        appCoordinator.start()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {

@@ -16,11 +16,14 @@ protocol StroriesViewModelProtocol {
     func getStoryTitle(at index: Int) -> String
     func getStoryLink(at index: Int) -> URL?
     func getTitle() -> String
+    func showStory(at index: Int)
 }
 
 final class StoriesViewModel: BaseViewModel, StroriesViewModelProtocol {
     
     // MARK: - PRIVATE PROPERTIES
+    
+    var didShowStory: ((URL) -> ())?
     
     private var feed = Feed() {
         didSet {
@@ -78,5 +81,10 @@ final class StoriesViewModel: BaseViewModel, StroriesViewModelProtocol {
     
     func getTitle() -> String {
         return feed.title ?? ""
+    }
+    
+    func showStory(at index: Int) {
+        guard let storyURL = getStoryLink(at: index) else { return }
+        didShowStory?(storyURL)
     }
 }

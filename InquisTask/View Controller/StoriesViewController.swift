@@ -105,8 +105,6 @@ extension StoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        guard let pageURL = storiesViewModel.getStoryLink(at: indexPath) else { return }
-        let webViewController = WebViewController(pageURL: pageURL)
-        self.navigationController?.pushViewController(webViewController, animated: true)
+        storiesViewModel.showStory(at: indexPath.row)
     }
 }
