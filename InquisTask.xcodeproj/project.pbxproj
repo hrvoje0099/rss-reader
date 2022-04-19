@@ -40,6 +40,8 @@
 		B0D3B33A276CD44800906AFB /* AddRSSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D3B339276CD44800906AFB /* AddRSSView.swift */; };
 		B0FCCFBE276CECA700C96A33 /* UITextField+BottomBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FCCFBD276CECA700C96A33 /* UITextField+BottomBorder.swift */; };
 		EEA88C212799786D00812F65 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA88C202799786D00812F65 /* AppCoordinator.swift */; };
+		EED5B5BA280EB2CB00814C4D /* InquisTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5B5B9280EB2CB00814C4D /* InquisTaskUITests.swift */; };
+		EED5B5BC280EB2CB00814C4D /* InquisTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED5B5BB280EB2CB00814C4D /* InquisTaskUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +52,7 @@
 			remoteGlobalIDString = B0026088276BB8CC00513354;
 			remoteInfo = InquisTask;
 		};
-		B00260AD276BB8D100513354 /* PBXContainerItemProxy */ = {
+		EED5B5BD280EB2CB00814C4D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B0026081276BB8CC00513354 /* Project object */;
 			proxyType = 1;
@@ -69,7 +71,6 @@
 		B002609D276BB8D000513354 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00260A2276BB8D100513354 /* InquisTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InquisTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00260A6276BB8D100513354 /* StoriesViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewModelTest.swift; sourceTree = "<group>"; };
-		B00260AC276BB8D100513354 /* InquisTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InquisTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00260C4276BBB3600513354 /* FeedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsView.swift; sourceTree = "<group>"; };
 		B00260C8276BBF1600513354 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		B00260CD276BF7ED00513354 /* AddFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFeedViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +97,9 @@
 		B0D3B339276CD44800906AFB /* AddRSSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRSSView.swift; sourceTree = "<group>"; };
 		B0FCCFBD276CECA700C96A33 /* UITextField+BottomBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+BottomBorder.swift"; sourceTree = "<group>"; };
 		EEA88C202799786D00812F65 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EED5B5B7280EB2CB00814C4D /* InquisTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InquisTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED5B5B9280EB2CB00814C4D /* InquisTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquisTaskUITests.swift; sourceTree = "<group>"; };
+		EED5B5BB280EB2CB00814C4D /* InquisTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquisTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +118,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B00260A9276BB8D100513354 /* Frameworks */ = {
+		EED5B5B4280EB2CB00814C4D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,6 +133,7 @@
 			children = (
 				B002608B276BB8CC00513354 /* InquisTask */,
 				B00260A5276BB8D100513354 /* InquisTaskTests */,
+				EED5B5B8280EB2CB00814C4D /* InquisTaskUITests */,
 				B002608A276BB8CC00513354 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,7 +143,7 @@
 			children = (
 				B0026089276BB8CC00513354 /* InquisTask.app */,
 				B00260A2276BB8D100513354 /* InquisTaskTests.xctest */,
-				B00260AC276BB8D100513354 /* InquisTaskUITests.xctest */,
+				EED5B5B7280EB2CB00814C4D /* InquisTaskUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +267,15 @@
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
+		EED5B5B8280EB2CB00814C4D /* InquisTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EED5B5B9280EB2CB00814C4D /* InquisTaskUITests.swift */,
+				EED5B5BB280EB2CB00814C4D /* InquisTaskUITestsLaunchTests.swift */,
+			);
+			path = InquisTaskUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,22 +318,22 @@
 			productReference = B00260A2276BB8D100513354 /* InquisTaskTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B00260AB276BB8D100513354 /* InquisTaskUITests */ = {
+		EED5B5B6280EB2CB00814C4D /* InquisTaskUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B00260BC276BB8D100513354 /* Build configuration list for PBXNativeTarget "InquisTaskUITests" */;
+			buildConfigurationList = EED5B5BF280EB2CB00814C4D /* Build configuration list for PBXNativeTarget "InquisTaskUITests" */;
 			buildPhases = (
-				B00260A8276BB8D100513354 /* Sources */,
-				B00260A9276BB8D100513354 /* Frameworks */,
-				B00260AA276BB8D100513354 /* Resources */,
+				EED5B5B3280EB2CB00814C4D /* Sources */,
+				EED5B5B4280EB2CB00814C4D /* Frameworks */,
+				EED5B5B5280EB2CB00814C4D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B00260AE276BB8D100513354 /* PBXTargetDependency */,
+				EED5B5BE280EB2CB00814C4D /* PBXTargetDependency */,
 			);
 			name = InquisTaskUITests;
 			productName = InquisTaskUITests;
-			productReference = B00260AC276BB8D100513354 /* InquisTaskUITests.xctest */;
+			productReference = EED5B5B7280EB2CB00814C4D /* InquisTaskUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -329,7 +343,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					B0026088276BB8CC00513354 = {
@@ -339,8 +353,8 @@
 						CreatedOnToolsVersion = 13.2;
 						TestTargetID = B0026088276BB8CC00513354;
 					};
-					B00260AB276BB8D100513354 = {
-						CreatedOnToolsVersion = 13.2;
+					EED5B5B6280EB2CB00814C4D = {
+						CreatedOnToolsVersion = 13.3;
 						TestTargetID = B0026088276BB8CC00513354;
 					};
 				};
@@ -363,7 +377,7 @@
 			targets = (
 				B0026088276BB8CC00513354 /* InquisTask */,
 				B00260A1276BB8D100513354 /* InquisTaskTests */,
-				B00260AB276BB8D100513354 /* InquisTaskUITests */,
+				EED5B5B6280EB2CB00814C4D /* InquisTaskUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -385,7 +399,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B00260AA276BB8D100513354 /* Resources */ = {
+		EED5B5B5280EB2CB00814C4D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -459,10 +473,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B00260A8276BB8D100513354 /* Sources */ = {
+		EED5B5B3280EB2CB00814C4D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED5B5BC280EB2CB00814C4D /* InquisTaskUITestsLaunchTests.swift in Sources */,
+				EED5B5BA280EB2CB00814C4D /* InquisTaskUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,10 +490,10 @@
 			target = B0026088276BB8CC00513354 /* InquisTask */;
 			targetProxy = B00260A3276BB8D100513354 /* PBXContainerItemProxy */;
 		};
-		B00260AE276BB8D100513354 /* PBXTargetDependency */ = {
+		EED5B5BE280EB2CB00814C4D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B0026088276BB8CC00513354 /* InquisTask */;
-			targetProxy = B00260AD276BB8D100513354 /* PBXContainerItemProxy */;
+			targetProxy = EED5B5BD280EB2CB00814C4D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -716,15 +732,16 @@
 			};
 			name = Release;
 		};
-		B00260BD276BB8D100513354 /* Debug */ = {
+		EED5B5C0280EB2CB00814C4D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AW4S424KH2;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hrvojevukovic.InquisTaskUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = hrvojeInquis.InquisTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -733,15 +750,16 @@
 			};
 			name = Debug;
 		};
-		B00260BE276BB8D100513354 /* Release */ = {
+		EED5B5C1280EB2CB00814C4D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AW4S424KH2;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hrvojevukovic.InquisTaskUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = hrvojeInquis.InquisTaskUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -780,11 +798,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B00260BC276BB8D100513354 /* Build configuration list for PBXNativeTarget "InquisTaskUITests" */ = {
+		EED5B5BF280EB2CB00814C4D /* Build configuration list for PBXNativeTarget "InquisTaskUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B00260BD276BB8D100513354 /* Debug */,
-				B00260BE276BB8D100513354 /* Release */,
+				EED5B5C0280EB2CB00814C4D /* Debug */,
+				EED5B5C1280EB2CB00814C4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
