@@ -75,39 +75,33 @@ struct FeedClient {
             return
         }
         
-        let urlRequest = URLRequest(url: feedURL, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 60)
+        let urlRequest = URLRequest(url: feedURL, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
 
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
-            if let error = error {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let error = error {
                     completion(.failure(.networkingError(error)))
+                    return
                 }
-                return
-            }
-
-            let http = response as! HTTPURLResponse
-            switch http.statusCode {
-            case 200:
-                if let data = data {
-                    self.loadFeed(data: data, completion: completion)
-                }
-
-            case 404:
-                DispatchQueue.main.async {
+                
+                let http = response as! HTTPURLResponse
+                switch http.statusCode {
+                case 200:
+                    if let data = data {
+                        self.loadFeed(data: data, completion: completion)
+                    }
+                    
+                case 404:
                     completion(.failure(.pageNotFound))
-                }
-
-            case 500...599:
-                DispatchQueue.main.async {
+                    
+                case 500...599:
                     completion(.failure(.serverError(http.statusCode)))
-                }
-
-            default:
-                DispatchQueue.main.async {
+                    
+                default:
                     completion(.failure(.requestFailed(http.statusCode)))
                 }
             }
-
+            
         }.resume()
     }
     
@@ -143,9 +137,8 @@ struct FeedClient {
             } catch {
                 fatalError()
             }
-            DispatchQueue.main.async {
-                completion(result)
-            }
+            
+            completion(result)
         }
     }
     
