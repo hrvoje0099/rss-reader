@@ -13,13 +13,13 @@ final class StoryCell: UITableViewCell {
     
     // MARK: - PROPERTIES
     
-    let storyCreatedDateLabel: UILabel = {
+    lazy var storyCreatedDateLabel: UILabel = {
         let storyCreatedDateLabel = UILabel()
         storyCreatedDateLabel.translatesAutoresizingMaskIntoConstraints = false
         return storyCreatedDateLabel
     }()
     
-    let storyNameLabel: UILabel = {
+    lazy var storyNameLabel: UILabel = {
         let storyNameLabel = UILabel()
         storyNameLabel.translatesAutoresizingMaskIntoConstraints = false
         storyNameLabel.numberOfLines = 0

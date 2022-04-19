@@ -98,6 +98,11 @@ final class FeedsViewModel: BaseViewModel, FeedsViewModelProtocol {
     func processRssUrl(_ textField: UITextField) {
         self.isLoading = true
         
+        // For testing purpose
+        #if DEBUG
+        textField.text = "https://www.index.hr/rss/sport"
+        #endif
+        
         guard let textFieldText = textField.text else {
             self.isLoading = false
             self.processInfoMessage(message: InfoMessage.wrongText)

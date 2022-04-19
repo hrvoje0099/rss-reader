@@ -40,15 +40,15 @@ class StoriesViewModelTest: XCTestCase {
     }
     
     func testGetStoryCreatedDate() {
-        XCTAssertEqual(storiesViewModel.getStoryCreatedDate(at: IndexPath(row: 0, section: 0)), "")
+        XCTAssertEqual(storiesViewModel.getStoryCreatedDate(at: 0), "")
     }
     
     func testGetStoryTitle() {
-        XCTAssertEqual(storiesViewModel.getStoryTitle(at: IndexPath(row: 0, section: 0)), "")
+        XCTAssertEqual(storiesViewModel.getStoryTitle(at: 0), "")
     }
     
     func testGetStoryLink() {
-        XCTAssertEqual(storiesViewModel.getStoryTitle(at: IndexPath(row: 0, section: 0)), "")
+        XCTAssertEqual(storiesViewModel.getStoryTitle(at: 0), "")
     }
     
     func testGetTitle() {

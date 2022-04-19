@@ -12,13 +12,13 @@ final class WebView: UIView {
     
     // MARK: - PROPERTIES
     
-    let wkWebView: WKWebView = {
+    lazy var wkWebView: WKWebView = {
         let wkWebView = WKWebView()
         wkWebView.translatesAutoresizingMaskIntoConstraints = false
         return wkWebView
     }()
     
-    let activityIndicator: UIActivityIndicatorView = {
+    lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.color = .black

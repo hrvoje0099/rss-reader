@@ -15,7 +15,7 @@ final class AddRSSView: UIView {
     
     // MARK: - PROPERTIES
     
-    let urlTextField: UITextField = {
+    private lazy var urlTextField: UITextField = {
         let urlTextField = UITextField()
         urlTextField.translatesAutoresizingMaskIntoConstraints = false
         urlTextField.placeholder = "RSS URL"
@@ -25,7 +25,7 @@ final class AddRSSView: UIView {
         return urlTextField
     }()
     
-    let addButton: UIButton = {
+    private lazy var addButton: UIButton = {
         let addButton = UIButton(type: .system)
         addButton.configuration = UIButton.Configuration.filled()
         addButton.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +34,7 @@ final class AddRSSView: UIView {
         return addButton
     }()
     
-    let infoLabel: UILabel = {
+    lazy var infoLabel: UILabel = {
         let infoLabel = UILabel()
         infoLabel.translatesAutoresizingMaskIntoConstraints = false
         infoLabel.textAlignment = .left
@@ -42,7 +42,7 @@ final class AddRSSView: UIView {
         return infoLabel
     }()
     
-    let activityIndicator: UIActivityIndicatorView = {
+    lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         return activityIndicator

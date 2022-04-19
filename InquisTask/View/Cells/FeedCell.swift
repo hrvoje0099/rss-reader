@@ -44,6 +44,12 @@ final class FeedCell: UITableViewCell {
         fatalError()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        feedImageView.image = UIImage(systemName: "questionmark.circle")
+        feedImageView.cancelImageLoad()
+    }
+    
     // MARK: - PRIVATE METHODS
     
     private func setupView() {

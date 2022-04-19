@@ -13,7 +13,7 @@ final class StoriesView: UIView {
     
     var storiesTableView = UITableView()
     
-    let activityIndicator: UIActivityIndicatorView = {
+    lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         return activityIndicator
